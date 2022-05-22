@@ -1,0 +1,85 @@
+\documentclass[oneside,senior,etd]{BYUPhys}
+
+\usepackage[utf8]{inputenc}
+\usepackage{rotating} 
+
+\usepackage[russian]{babel}
+\usepackage{amsfonts} % Пакеты для математических символов и теорем
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx} % Пакеты для вставки графики
+\usepackage{subfig}
+\usepackage{color}
+\usepackage[unicode]{hyperref}
+\usepackage[nottoc]{tocbibind} % Для того, чтобы список литературы отображался в оглавлении
+\usepackage{algorithmic} % Для записи алгоритмов в псевдокоде
+\usepackage{algorithm}
+\usepackage{verbatim} % Для вставок заранее подготовленного текста в режиме as-is
+\usepackage{graphicx}
+\usepackage{listings}
+\graphicspath{ {./images/} }
+
+
+\newcommand{\shellcmd}[1]{\\\indent\texttt{\footnotesize\# #1}}
+\newcommand*{\codebox}[1]{{\ttfamily\hyphenchar\font=45\relax\hl{~#1~}}}
+
+
+\University{Министерство образования и науки Российской Федерации \\
+        Московский физико-технический институт (государственный университет)}
+        
+\Faculty{Физтех-школа прикладной математики и информатики}  
+
+\Chair{Кафедра информатики и вычислительной математики}
+
+\docname{
+  Выпускная квалификационная работа магистра по направлению 03.04.01 <<Прикладные математика и физика>>}
+
+
+\TitleTop{Проектирование и реализация системы }
+\TitleBottom{автоматической проверки задач курсов по программированию}
+
+\AuthorText{Работу выполнил}
+\Author{студент группы М05-908А,\linebreakВеликанов Олег Владиславович}
+
+\AdvisorText{Научный руководитель}
+\AdvisorDegree{кандидат физико-математических наук \linebreak}
+\Advisor{Хохлов Николай Игоревич}
+  
+\Year{2022}
+\City{Москва}  
+
+
+\AbstractText{Аннотация}
+\Abstract{
+В данной работе решается задача построения системы автоматизированного тестирования решений студентов к задачам из курсов по программированию.
+Такая система необходима для эффективной проверки практических заданий и позволяет увеличивать объем практической работы студентов.
+В ходе работы спроектирована и реализована проверяющая система, интегрированная с системой дистанционного обучения LMS и с уже существующей системой проверки Ejudge.
+Построенная система имеет пользовательский интерфейс в LMS и расширяет функционал Ejudge, позволяя гибко добавлять новые механизмы проверки без изменения существущих компонентов системы.
+В рамках данной работы реализован механизм проверки MPI программ, поддержки которых не было в Ejudge.
+}
+\AbstractEng{~}
+\GrText{}
+\Lab{}
+
+
+
+\begin{document}
+\fixmargins
+\makepreliminarypages
+
+\oneandhalfspace
+
+\tableofcontents
+
+\include{Chapter1} % Введение
+\include{Chapter2} % Постановка задачи
+\include{Chapter3} % Обзор существующих решений
+\include{Chapter4} % Исследование и построение решения задачи
+\include{Chapter5} % Описание практической части
+\include{Chapter6} % Заключение
+
+\bibliographystyle{gost780u} % Для соответствия требованиям об оформлении списка литературы
+\bibliography{references}
+
+\end{document}
